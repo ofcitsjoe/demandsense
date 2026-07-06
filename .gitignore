@@ -1,0 +1,12 @@
+# Environments
+.env
+__pycache__/
+.pytest_cache/
+
+# Data files (we don't upload massive datasets to GitHub)
+*.csv
+*.parquet
+data/raw/
+
+# OS generated files
+.DS_Store

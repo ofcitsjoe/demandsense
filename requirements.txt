@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+prophet
+streamlit
+pytest
+black
+flake8
+python-dotenv
