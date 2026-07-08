@@ -1,29 +1,86 @@
 # 📈 DemandSense AI
+
 ### Retail Inventory Forecasting & Supply Chain Optimization using Machine Learning
 
-DemandSense AI is an end-to-end machine learning project that forecasts retail demand using both statistical and deep learning approaches. The project compares forecasting models, estimates inventory requirements, and visualizes business impact through an interactive Streamlit dashboard.
-
-The objective is to demonstrate how AI-driven demand forecasting can reduce overstock, minimize stockouts, and improve inventory planning.
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20WSL-blue)
+![Python](https://img.shields.io/badge/python-3.12+-blue)
+![Status](https://img.shields.io/badge/status-active-success)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-ff4b4b)
+![Prophet](https://img.shields.io/badge/Forecasting-Prophet-blue)
 
 ---
 
-## 🚀 Features
+## 📖 Overview
+
+DemandSense AI is an end-to-end machine learning project that forecasts retail demand using both statistical and deep learning models. The system processes retail sales data through a complete ETL pipeline, trains multiple forecasting models, estimates inventory requirements, and visualizes business impact through an interactive Streamlit dashboard.
+
+The project demonstrates practical machine learning engineering by combining data engineering, time-series forecasting, business analytics, and modern software engineering practices into a modular, production-oriented workflow.
+
+---
+
+## 🎯 Project Goals
+
+This project was built to demonstrate practical implementation of:
+
+- End-to-end Machine Learning pipelines
+- Retail demand forecasting
+- Time-series Deep Learning
+- ETL and feature engineering workflows
+- Business KPI analysis
+- Interactive analytical dashboards
+- Modular software architecture
+
+---
+
+# 🚀 Features
 
 - Synthetic retail sales data generation
-- Complete ETL pipeline using Pandas
+- Complete ETL pipeline
 - Exploratory Data Analysis (EDA)
+- Feature engineering
 - Time-series forecasting with Prophet
 - Deep Learning forecasting using PyTorch LSTM
-- Interactive Streamlit dashboard
-- Business KPI calculations
+- Forecast comparison
 - Inventory optimization insights
+- Business KPI calculations
+- Interactive Streamlit dashboard
 - Modular project architecture
 
 ---
 
-## 📊 Dashboard Preview
+# 💻 Development Environment
+
+This project was developed and tested on:
+
+- Ubuntu Linux
+- Windows Subsystem for Linux (WSL2)
+- Python 3.12+
+
+The LSTM training pipeline automatically utilizes CUDA acceleration when a compatible NVIDIA GPU is available, while gracefully falling back to CPU execution otherwise.
+
+---
+
+# 📊 Interactive Dashboard
+
+The Streamlit dashboard allows business users to explore demand forecasts, compare forecasting models, and evaluate inventory decisions through an intuitive interface.
+
+## Dashboard Preview
 
 ![Dashboard](assets/dashboard.png)
+
+### Dashboard Features
+
+- Store selection
+- Product filtering
+- Prophet vs LSTM comparison
+- Interactive forecast visualization
+- Inventory recommendations
+- Estimated overstock reduction
+- Estimated stockout prevention
+- Business ROI metrics
 
 ---
 
@@ -66,14 +123,14 @@ Feature Engineering
 - Synthetic retail sales generation
 - Missing value handling
 - Date parsing
-- Feature creation
+- Feature engineering
 - Data normalization
 
 ---
 
 ## 2. Exploratory Data Analysis
 
-- Sales trends
+- Sales trend analysis
 - Weekly seasonality
 - Rolling averages
 - Distribution analysis
@@ -81,7 +138,7 @@ Feature Engineering
 
 ---
 
-## 3. Baseline Forecasting
+## 3. Statistical Forecasting
 
 Implemented using **Meta Prophet**.
 
@@ -90,18 +147,18 @@ Features include:
 - Trend modeling
 - Weekly seasonality
 - Future demand prediction
-- Business rule validation
-- Forecast clipping
+- Forecast validation
+- Business rule guardrails
 
 ---
 
-## 4. Deep Learning Forecast
+## 4. Deep Learning Forecasting
 
 Built using **PyTorch LSTM**.
 
 Pipeline includes:
 
-- Sliding window dataset creation
+- Sliding window dataset generation
 - Sequence modeling
 - GPU (CUDA) acceleration
 - Multi-epoch training
@@ -109,32 +166,62 @@ Pipeline includes:
 
 ---
 
-## 5. Business Intelligence Dashboard
+## 🤖 Why Two Forecasting Models?
 
-Built using **Streamlit**.
+DemandSense AI compares two fundamentally different forecasting approaches.
 
-Dashboard includes:
+### Prophet
 
-- Store selection
-- Product filtering
-- Forecast visualization
-- Inventory recommendations
-- Estimated overstock reduction
-- Estimated stockout prevention
-- ROI metrics
+- Strong statistical baseline
+- Fast training
+- Excellent seasonal forecasting
+- Interpretable predictions
+
+### PyTorch LSTM
+
+- Learns nonlinear temporal relationships
+- Captures complex demand patterns
+- Supports GPU acceleration
+- Deep learning approach for sequential data
 
 ---
 
-# ⚙️ Tech Stack
+## 📈 Business Intelligence Dashboard
+
+Built using **Streamlit**.
+
+The dashboard enables business users to:
+
+- Compare Prophet and LSTM forecasts
+- Analyze historical sales trends
+- Estimate inventory requirements
+- Evaluate business KPIs
+- Visualize demand forecasts interactively
+
+---
+
+# ⚡ Performance
+
+The deep learning pipeline supports hardware acceleration using CUDA.
+
+- Automatic GPU detection
+- CPU fallback support
+- Optimized tensor operations
+- Efficient batch processing
+
+---
+
+# ⚙️ Technology Stack
 
 | Category | Technologies |
 |-----------|--------------|
-| Language | Python 3.10 |
-| Data Processing | Pandas, NumPy |
+| Programming | Python 3.12 |
+| Data Engineering | Pandas, NumPy |
 | Machine Learning | PyTorch, Prophet, Scikit-Learn |
 | Visualization | Matplotlib, Plotly |
 | Dashboard | Streamlit |
-| Environment | Linux, WSL |
+| Development | Linux, WSL2 |
+| Version Control | Git, GitHub |
 
 ---
 
@@ -172,35 +259,42 @@ demandsense/
 # 📈 Example Workflow
 
 ```text
-Generate Data
-      ↓
-Clean Data
-      ↓
-EDA
-      ↓
+Generate Raw Data
+        │
+        ▼
+Clean & Transform Data
+        │
+        ▼
+Exploratory Data Analysis
+        │
+        ▼
 Train Prophet
-      ↓
+        │
+        ▼
 Train LSTM
-      ↓
-Generate Forecast
-      ↓
-Calculate Business Metrics
-      ↓
-Visualize Dashboard
+        │
+        ▼
+Generate Forecasts
+        │
+        ▼
+Calculate Business KPIs
+        │
+        ▼
+Interactive Dashboard
 ```
 
 ---
 
 # 🛠 Installation
 
-Clone the repository.
+## Clone the repository
 
 ```bash
 git clone https://github.com/ofcitsjoe/demandsense.git
 cd demandsense
 ```
 
-Install dependencies.
+## Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -242,18 +336,15 @@ streamlit run dashboard/app.py
 
 ---
 
-# 📌 Future Improvements
+# 📈 Example Results
 
-- [ ] CSV upload support
-- [ ] Real-time inference API
-- [ ] Docker deployment
-- [ ] PostgreSQL integration
-- [ ] Snowflake support
-- [ ] Weather and holiday features
-- [ ] Multi-product forecasting
-- [ ] Attention-based forecasting models
-- [ ] CI/CD pipeline
-- [ ] Cloud deployment (AWS/Azure/GCP)
+The forecasting pipeline demonstrates:
+
+- Accurate seasonal trend learning
+- Multi-model demand forecasting
+- Inventory requirement estimation
+- Business KPI reporting
+- Interactive visualization for decision support
 
 ---
 
@@ -261,23 +352,46 @@ streamlit run dashboard/app.py
 
 This project demonstrates practical experience with:
 
-- Time Series Forecasting
+- Machine Learning Engineering
+- Time-Series Forecasting
 - Deep Learning
 - LSTM Networks
-- Retail Analytics
 - ETL Pipelines
 - Feature Engineering
+- Business Analytics
+- Data Visualization
 - Streamlit Applications
-- Business KPI Analysis
-- Python Project Architecture
+- Production-oriented Python Architecture
+
+---
+
+# 📌 Future Improvements
+
+- [ ] CSV upload support
+- [ ] Real-time inference API
+- [ ] Docker containerization
+- [ ] PostgreSQL integration
+- [ ] Snowflake integration
+- [ ] Weather and holiday features
+- [ ] Multi-product forecasting
+- [ ] Transformer-based forecasting models
+- [ ] CI/CD pipeline
+- [ ] Cloud deployment (AWS/Azure/GCP)
+
+---
+
+# 📝 Notes
+
+- This project uses synthetically generated retail data for demonstration purposes.
+- The repository focuses on showcasing practical machine learning engineering workflows rather than production retail forecasting.
 
 ---
 
 # 🤝 Contributing
 
-Contributions are welcome!
+Contributions, suggestions, and improvements are welcome.
 
-Feel free to fork the repository, open issues, or submit pull requests.
+Feel free to fork the repository, open an issue, or submit a pull request.
 
 ---
 
@@ -287,4 +401,4 @@ This project is licensed under the MIT License.
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a star!
+## ⭐ If you found this project helpful, consider giving it a star!
